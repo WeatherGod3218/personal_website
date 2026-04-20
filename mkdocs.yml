@@ -1,0 +1,53 @@
+---
+site_name: "Weather Works"
+site_description: "A personal website for my projects, about me, and more!"
+
+theme:
+  name: material
+  #logo: images/jumpstart_half.png
+  favicon: images/jumpstart_small.png
+  palette:
+    - scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/brightness-2
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.expand
+    - navigation.instant
+    - navigation.sections
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+
+use_directory_urls: false
+
+nav:
+  - Home: index.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: ["src"]
+          options:
+            heading_level: 3
+            show_source: true
+            docstring_style: google
+            show_root_heading: false
+            show_root_full_path: false
+            show_signature: false
+            filters:
+              - ".*"

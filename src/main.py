@@ -18,34 +18,22 @@ from contextlib import asynccontextmanager
 
 from config import BASE_DIR
 
-from api import endpoints
-from core import wikithoughts, cshcalendar
-
 logger: Logger = getLogger(__name__)
 
+app: FastAPI = FastAPI(docs_url="/swag")
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-	logger.info("Starting up the Jumpstart application!")
-	asyncio.create_task(cshcalendar.rebuild_calendar())
-	await wikithoughts.auth_bot()
-
-	yield
-	logger.info("Shutting down the Jumpstart application!")
-	await cshcalendar.close_client()
-
-	logger.info("Succesfully shut down the Jumpstart application!")
-
-
-app: FastAPI = FastAPI(docs_url="/swag", lifespan=lifespan)
-
-logger.info("Mounting static files and templates!")
+"""logger.info("Mounting static files and templates!")
 app.mount(
 	"/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static"
 )
 
 templates: Jinja2Templates = Jinja2Templates(
 	directory=os.path.join(BASE_DIR, "templates")
+)
+"""
+
+app.mount(
+	"/docs", StaticFiles(directory=os.path.join(BASE_DIR, "docs")), name="docs"
 )
 
 if os.path.exists(os.path.join(BASE_DIR, "docs")):
@@ -63,12 +51,10 @@ if os.path.exists(os.path.join(BASE_DIR, "docs")):
 else:
 	logger.warning("Documentation directory not found, skipping documentation setup!")
 
-logger.info("Importing API endpoints!")
-app.include_router(endpoints.router, prefix="/api")
 
 logger.info("Finished setting up the application!")
 
 
 @app.get("/", response_class=HTMLResponse)
 async def read_index(request: Request):
-	return templates.TemplateResponse(name="index.html", request=request)
+	return RedirectResponse(url="/docs")

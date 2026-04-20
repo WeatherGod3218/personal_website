@@ -9,4 +9,3 @@ During a fetch of the calendar, if any other clients attempt to connect, they wi
 ---
 
 ### Documentation Overview
-::: core.cshcalendar

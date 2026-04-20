@@ -18,4 +18,3 @@ In the event of an Error, the API will log an error and display default text
 }
 ```
 
-::: api.endpoints.wikithought
