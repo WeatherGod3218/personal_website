@@ -11,4 +11,3 @@ This component handles the fetching, caching and cycling of the CSH Wikithoughts
 ---
 
 ### Documentation Overview
-::: core.wikithoughts

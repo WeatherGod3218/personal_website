@@ -3,4 +3,3 @@ This component handles the Slack Bot and it's related functions. Such as respond
 ---
 
 ### Documentation Overview
-::: core.slack

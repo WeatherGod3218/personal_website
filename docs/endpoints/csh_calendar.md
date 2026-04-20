@@ -26,4 +26,3 @@ Example error response:
 ```
 
 ### Endpoint Overview
-::: api.endpoints.get_calendar
