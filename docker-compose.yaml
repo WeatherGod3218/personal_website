@@ -1,0 +1,8 @@
+services:
+  weatherworks-pubsite:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: WeatherWorks-Pubsite
+    ports:
+      - "8080:8080"

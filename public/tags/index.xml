@@ -1,37 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Tags on WeatherWorks Personal Project</title>
+		<title>Tags on Hi, I&#39;m WeatherWorks!</title>
 		<link>http://localhost:1313/tags/</link>
-		<description>Recent content in Tags on WeatherWorks Personal Project</description>
+		<description>Recent content in Tags on Hi, I&#39;m WeatherWorks!</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
 		
 		
 		
-			<lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
+			<lastBuildDate>Thu, 08 Oct 2026 13:07:46 -0400</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Blue</title>
-				<link>http://localhost:1313/tags/blue/</link>
-				<pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-				<guid>http://localhost:1313/tags/blue/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Green</title>
-				<link>http://localhost:1313/tags/green/</link>
-				<pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-				<guid>http://localhost:1313/tags/green/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Red</title>
-				<link>http://localhost:1313/tags/red/</link>
-				<pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-				<guid>http://localhost:1313/tags/red/</guid>
+				<title>Programming</title>
+				<link>http://localhost:1313/tags/programming/</link>
+				<pubDate>Thu, 08 Oct 2026 13:07:46 -0400</pubDate>
+				<guid>http://localhost:1313/tags/programming/</guid>
 				<description></description>
 			</item>
 	</channel>

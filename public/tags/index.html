@@ -3,7 +3,14 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Tags | WeatherWorks Personal Project</title>
+<title>Tags | Hi, I&#39;m WeatherWorks!</title>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const theme = savedTheme ? savedTheme : (systemPrefersDark ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", theme);
+</script>
+
 
       <link rel="stylesheet" href="/css/main.css">
 
@@ -14,7 +21,7 @@
 </head>
 <body>
   <header>
-    <h1>WeatherWorks Personal Project</h1>
+    <h1>Hi, I&#39;m WeatherWorks!</h1>
 
   <nav>
     <ul>
@@ -22,10 +29,16 @@
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="/posts/">Posts</a>
+      <a href="/programming/">Programming</a>
     </li>
     <li>
-      <a aria-current="page" class="active" href="/tags/">Tags</a>
+      <a href="/animations/">Animations</a>
+    </li>
+    <li>
+      <a href="/impact_frames/">Impact Frames</a>
+    </li>
+    <li>
+      <a href="/sound_design/">Sound Design</a>
     </li>
     </ul>
   </nav>
@@ -37,11 +50,7 @@
   <h1>Tags</h1>
   
   
-    <h2><a href="/tags/blue/">Blue</a></h2>
-  
-    <h2><a href="/tags/green/">Green</a></h2>
-  
-    <h2><a href="/tags/red/">Red</a></h2>
+    <h2><a href="/tags/programming/">Programming</a></h2>
   
 
   </main>

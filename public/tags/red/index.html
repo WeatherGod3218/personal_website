@@ -3,7 +3,14 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Red | WeatherWorks Personal Project</title>
+<title>Red | Hi, I&#39;m WeatherWorks!</title>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const theme = savedTheme ? savedTheme : (systemPrefersDark ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", theme);
+</script>
+
 
       <link rel="stylesheet" href="/css/main.css">
 
@@ -14,7 +21,7 @@
 </head>
 <body>
   <header>
-    <h1>WeatherWorks Personal Project</h1>
+    <h1>Hi, I&#39;m WeatherWorks!</h1>
 
   <nav>
     <ul>
@@ -22,10 +29,16 @@
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="/posts/">Posts</a>
+      <a href="/programming/">Programming</a>
     </li>
     <li>
-      <a href="/tags/">Tags</a>
+      <a href="/animations/">Animations</a>
+    </li>
+    <li>
+      <a href="/impact_frames/">Impact Frames</a>
+    </li>
+    <li>
+      <a href="/sound_design/">Sound Design</a>
     </li>
     </ul>
   </nav>
@@ -37,11 +50,35 @@
   <h1>Red</h1>
   
   
+    <h2><a href="/animations/post-3/">Post 3</a></h2>
+  
+    <h2><a href="/impact_frames/post-3/">Post 3</a></h2>
+  
     <h2><a href="/posts/post-3/">Post 3</a></h2>
+  
+    <h2><a href="/programming/post-3/">Post 3</a></h2>
+  
+    <h2><a href="/sound_design/post-3/">Post 3</a></h2>
+  
+    <h2><a href="/animations/post-2/">Post 2</a></h2>
+  
+    <h2><a href="/impact_frames/post-2/">Post 2</a></h2>
   
     <h2><a href="/posts/post-2/">Post 2</a></h2>
   
+    <h2><a href="/programming/post-2/">Post 2</a></h2>
+  
+    <h2><a href="/sound_design/post-2/">Post 2</a></h2>
+  
+    <h2><a href="/animations/post-1/">Post 1</a></h2>
+  
+    <h2><a href="/impact_frames/post-1/">Post 1</a></h2>
+  
     <h2><a href="/posts/post-1/">Post 1</a></h2>
+  
+    <h2><a href="/programming/post-1/">Post 1</a></h2>
+  
+    <h2><a href="/sound_design/post-1/">Post 1</a></h2>
   
 
   </main>

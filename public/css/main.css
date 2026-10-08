@@ -11,15 +11,51 @@ footer {
 }
 
 /* <stdin> */
+@font-face {
+  font-family: "Iosevka";
+  src: url("/css/IosevkaCharon-Regular-23KZPCM3.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --dark-purple: #130216;
+  --purple: #9732a8;
+  --light-purple: #b47ebd;
+  --lighter-purple: #ECBFEE;
+  --light-pink: #FCDBFA;
+  --lightest-pink: #ffecfc;
+}
+[data-theme=dark] {
+  --bg-color: var(--dark-purple);
+  --text-color: var(--lightest-pink);
+  --anchor-color: var(--light-purple);
+  --visited-anchor-color: var(--purple) ;
+}
+[data-theme=light] {
+  --bg-color: var(--lightest-pink);
+  --text-color: var(--dark-purple);
+}
 body {
-  color: #222;
-  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Iosevka", sans-serif;
   line-height: 1.5;
   margin: 1rem;
   max-width: 768px;
 }
-a {
-  color: #00e;
-  text-decoration: none;
+a:link {
+  color: var(--anchor-color);
+}
+a:visited {
+  color: var(--visited-anchor-color);
+}
+a:hover {
+  color: #e74c3c;
+}
+a:active {
+  color: #2f00ff;
 }
 /*# sourceMappingURL=main.css.map */
