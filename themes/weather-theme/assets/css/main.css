@@ -14,10 +14,30 @@
   font-display: swap;
 }
 
+.header-test {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-items: center; 
+}
+
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
 :root {
   --bg-color: #ffffff;
   --text-color: #111111;
 
+  --darker-purple: #09010a;
   --dark-purple: #130216;
   --purple: #9732a8;
   --light-purple: #b47ebd;
@@ -26,16 +46,31 @@
   --lightest-pink: #ffecfc;
 }
 
+
 [data-theme="dark"] {
+  --popup-color: var(--darker-purple);
   --bg-color: var(--dark-purple);
   --text-color: var(--lightest-pink);
   --anchor-color: var(--light-purple);
-  --visited-anchor-color: var(--purple)
+  --visited-anchor-color: var(--purple);
+  .icon-sun  { display: none; };
+  .icon-moon  { display: inline; };
 }
 
 [data-theme="light"] {
+  --anchor-color: var(--light-purple);
+  --visited-anchor-color: var(--purple);
+  --popup-color: var(--light-purple);
   --bg-color: var(--lightest-pink);
   --text-color: var(--dark-purple);
+  .icon-sun  { display: inline; };
+  .icon-moon  { display: none; };
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 body {
@@ -43,8 +78,36 @@ body {
   color: var(--text-color);
   font-family: "Iosevka", sans-serif;
   line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+nav li {
+  position: relative;
+}
+
+nav li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0.4rem;
+  background: var(--popup-color);
+  white-space: nowrap;
+  min-width: 100%;
+  border-radius: 12px;
+  translate: 10px;
+}
+
+nav li:hover > ul,
+nav li:focus-within > ul {
+  display: block;
 }
 
 a:link {
@@ -61,4 +124,9 @@ a:hover {
 
 a:active {
   color: #2f00ff; 
+}
+
+.theme-icon {
+  fill: var(--text-color);
+  stroke: var(--text-color) ;
 }

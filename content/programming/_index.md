@@ -4,4 +4,6 @@ date = '2026-10-08T13:07:46-04:00'
 draft = false
 +++
 
-Tempor est exercitation ad qui pariatur quis adipisicing aliquip nisi ea consequat ipsum occaecat. Nostrud consequat ullamco laboris fugiat esse esse adipisicing velit laborum ipsum incididunt ut enim. Dolor pariatur nulla quis fugiat dolore excepteur. Aliquip ad quis aliqua enim do consequat.
+I love programming in so many different aspects, whether it be Game Design, Software Engineering, or so many other things in the Computer Science world. I've worked on lots of different projects, and luckily had the chance to get experience with a lot of industry standard tools.
+
+I am always geared towards working on another project and getting to learn. Below you can find some of my projects!

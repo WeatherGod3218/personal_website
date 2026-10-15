@@ -1,16 +1,4 @@
-/* ns-hugo-imp:E:\Code Files\Personal\personal_website\themes\weather-theme\assets\css\components\header.css */
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
-}
-
-/* ns-hugo-imp:E:\Code Files\Personal\personal_website\themes\weather-theme\assets\css\components\footer.css */
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
-}
-
-/* <stdin> */
+/* ns-hugo-imp:E:\Code Files\Personal\personal_website\themes\weather-theme\assets\css\main.css */
 @font-face {
   font-family: "Iosevka";
   src: url("/css/IosevkaCharon-Regular-23KZPCM3.ttf") format("truetype");
@@ -18,9 +6,27 @@ footer {
   font-style: normal;
   font-display: swap;
 }
+.header-test {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
 :root {
   --bg-color: #ffffff;
   --text-color: #111111;
+  --darker-purple: #09010a;
   --dark-purple: #130216;
   --purple: #9732a8;
   --light-purple: #b47ebd;
@@ -29,22 +35,67 @@ footer {
   --lightest-pink: #ffecfc;
 }
 [data-theme=dark] {
+  --popup-color: var(--darker-purple);
   --bg-color: var(--dark-purple);
   --text-color: var(--lightest-pink);
   --anchor-color: var(--light-purple);
-  --visited-anchor-color: var(--purple) ;
+  --visited-anchor-color: var(--purple);
+  .icon-sun {
+    display: none;
+  }
+  .icon-moon {
+    display: inline;
+  }
 }
 [data-theme=light] {
+  --anchor-color: var(--light-purple);
+  --visited-anchor-color: var(--purple);
+  --popup-color: var(--light-purple);
   --bg-color: var(--lightest-pink);
   --text-color: var(--dark-purple);
+  .icon-sun {
+    display: inline;
+  }
+  .icon-moon {
+    display: none;
+  }
+}
+#theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Iosevka", sans-serif;
   line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+nav li {
+  position: relative;
+}
+nav li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0.4rem;
+  background: var(--popup-color);
+  white-space: nowrap;
+  min-width: 100%;
+  border-radius: 12px;
+  translate: 10px;
+}
+nav li:hover > ul,
+nav li:focus-within > ul {
+  display: block;
 }
 a:link {
   color: var(--anchor-color);
@@ -57,5 +108,170 @@ a:hover {
 }
 a:active {
   color: #2f00ff;
+}
+.theme-icon {
+  fill: var(--text-color);
+  stroke: var(--text-color);
+}
+
+/* ns-hugo-imp:E:\Code Files\Personal\personal_website\themes\weather-theme\assets\css\components\header.css */
+header {
+  border-bottom: 1px solid #222;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+nav li {
+  position: relative;
+}
+nav li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0.4rem;
+  background: var(--popup-color);
+  white-space: nowrap;
+  min-width: 100%;
+  border-radius: 12px;
+  translate: 10px;
+}
+nav li:hover > ul,
+nav li:focus-within > ul {
+  display: block;
+}
+.theme-icon {
+  fill: var(--text-color);
+  stroke: var(--text-color);
+}
+
+/* ns-hugo-imp:E:\Code Files\Personal\personal_website\themes\weather-theme\assets\css\components\footer.css */
+footer {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* <stdin> */
+@font-face {
+  font-family: "Iosevka";
+  src: url("/css/IosevkaCharon-Regular-23KZPCM3.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.header-test {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --darker-purple: #09010a;
+  --dark-purple: #130216;
+  --purple: #9732a8;
+  --light-purple: #b47ebd;
+  --lighter-purple: #ECBFEE;
+  --light-pink: #FCDBFA;
+  --lightest-pink: #ffecfc;
+}
+[data-theme=dark] {
+  --popup-color: var(--darker-purple);
+  --bg-color: var(--dark-purple);
+  --text-color: var(--lightest-pink);
+  --anchor-color: var(--light-purple);
+  --visited-anchor-color: var(--purple);
+  .icon-sun {
+    display: none;
+  }
+  .icon-moon {
+    display: inline;
+  }
+}
+[data-theme=light] {
+  --anchor-color: var(--light-purple);
+  --visited-anchor-color: var(--purple);
+  --popup-color: var(--light-purple);
+  --bg-color: var(--lightest-pink);
+  --text-color: var(--dark-purple);
+  .icon-sun {
+    display: inline;
+  }
+  .icon-moon {
+    display: none;
+  }
+}
+#theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Iosevka", sans-serif;
+  line-height: 1.5;
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+nav li {
+  position: relative;
+}
+nav li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0.4rem;
+  background: var(--popup-color);
+  white-space: nowrap;
+  min-width: 100%;
+  border-radius: 12px;
+  translate: 10px;
+}
+nav li:hover > ul,
+nav li:focus-within > ul {
+  display: block;
+}
+a:link {
+  color: var(--anchor-color);
+}
+a:visited {
+  color: var(--visited-anchor-color);
+}
+a:hover {
+  color: #e74c3c;
+}
+a:active {
+  color: #2f00ff;
+}
+.theme-icon {
+  fill: var(--text-color);
+  stroke: var(--text-color);
 }
 /*# sourceMappingURL=main.css.map */

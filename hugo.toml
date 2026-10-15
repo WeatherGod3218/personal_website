@@ -1,7 +1,10 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
-title = "Hi, I'm WeatherWorks!"
+title = "WeatherWorks"
 theme = "weather-theme"
+
+[params]
+  author = "Eli Mares"
 
 [menus]
   [[menus.main]]
@@ -10,24 +13,36 @@ theme = "weather-theme"
     weight = 10
 
   [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 20
+
+  [[menus.main]]
     name = 'Programming'
     pageRef = '/programming'
-    weight = 20
+    weight = 30
 
   [[menus.main]]
     name = 'Animations'
     pageRef = '/animations'
-    weight = 30
+    weight = 40
 
   [[menus.main]]
+    identifier = 'impactframes'
     name = 'Impact Frames'
     pageRef = '/impact_frames'
-    weight = 40
+    weight = 50
+
+  [[menus.main]]
+    parent = "impactframes"
+    name = 'CHAIN'
+    pageRef = '/impact_frames/chain'
+    weight = 10
 
   [[menus.main]]
     name = 'Sound Design'
     pageRef = '/sound_design'
-    weight = 50
+    weight = 60
 
 [module]
   [module.hugoVersion]

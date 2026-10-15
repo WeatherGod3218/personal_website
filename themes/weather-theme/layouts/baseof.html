@@ -4,7 +4,7 @@
   {{ partial "head.html" . }}
 </head>
 <body>
-  <header>
+  <header class="main-header">
     {{ partial "header.html" . }}
   </header>
   <main>
@@ -13,5 +13,7 @@
   <footer>
     {{ partial "footer.html" . }}
   </footer>
+  {{ $theme := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $theme.RelPermalink }}" integrity="{{ $theme.Data.Integrity }}" defer></script>
 </body>
 </html>
